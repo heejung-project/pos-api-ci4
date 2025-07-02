@@ -439,8 +439,6 @@ class OrderController extends ResourceController
             }
             $store_serial = $admin['store_serial'];
 
-            log_message('info','<<INPUT PARAM>>'.'--'.var_export($this->request->getVar('start_date'),1));
-
             $start_date = $this->request->getVar('start_date');
             $end_date = $this->request->getVar('end_date');
 

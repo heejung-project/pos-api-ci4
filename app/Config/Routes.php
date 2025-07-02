@@ -42,7 +42,7 @@ $routes->group('api', function($routes) {
     $routes->get('menu/menus_order', 'MenuController::menusForOrder');
 
     //Order
-    $routes->post('order/list', 'OrderController::orderList');
+    $routes->get('order', 'OrderController::orderList');
     $routes->post('order/table/(:num)', 'OrderController::tableOrderList/$1');
     $routes->post('order/create', 'OrderController::order');
     $routes->post('order/update', 'OrderController::orderMenuModify');
@@ -52,4 +52,9 @@ $routes->group('api', function($routes) {
     //Payment
     $routes->put('payment/(:num)', 'PaymentController::payment/$1');
     $routes->put('payment/cancel/(:num)', 'PaymentController::paymentCancel/$1');
+
+    //Sales
+    $routes->get('sales', 'SalesController::salesInfo');
+    $routes->get('sales/order/(:num)', 'SalesController::orderDetail/$1');
+    $routes->get('sales/menu', 'SalesController::menuSales');
 });

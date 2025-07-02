@@ -16,6 +16,7 @@ class PaymentController extends ResourceController
     protected $format = 'json';
     protected $adminModel;
     protected $orderModel;
+    protected $orderDetailModel;
 
     public function __construct()
     {
